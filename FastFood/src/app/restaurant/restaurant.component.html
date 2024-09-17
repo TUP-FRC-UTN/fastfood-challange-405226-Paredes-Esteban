@@ -1,0 +1,7 @@
+<h2>Restaurante FastFood</h2>
+<p>Pedidos Ingresados:</p>
+<ul>
+    @for(pedido of pedidosNoListos; track $index){
+        <li>{{pedido| json }}</li>
+    }
+</ul>

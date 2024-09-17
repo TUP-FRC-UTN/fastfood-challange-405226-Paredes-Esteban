@@ -1,0 +1,23 @@
+<div class="m-2">
+    <form (ngSubmit)="ordenarPedido()" #form="ngForm">
+        <h3>Point of Sell</h3>
+        <div class="row">
+            <label for="userName" class="form-label">Nombre:</label>
+        </div>
+        <div class="row">
+            <input type="text" [(ngModel)]="order.name" name="userName" class="form-control" required>
+        </div>
+        <div class="row">
+            <label for="userOrder" class="form-label">Pedido:</label>
+        </div>
+        <div class="row">
+            <input type="text" [(ngModel)]="order.description" name="userOrder" class="form-control" required>
+        </div>
+        @if(form.invalid){
+            <button type="button" (click)="ordenarPedido()" class="btn btn-primary" disabled>Ordenar</button>
+        }
+        @else {
+            <button type="button" (click)="ordenarPedido()" class="btn btn-primary">Ordenar</button>
+        }
+    </form>
+</div>

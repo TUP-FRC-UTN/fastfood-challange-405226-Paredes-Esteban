@@ -1,0 +1,25 @@
+<div>
+    <h3>Cocina:</h3>
+    <div class="row">
+        <h4>Pendiente de Cocinar:</h4>
+        <div>
+            <ul>
+            @for(order of pendingOrders; track $index){
+                <li>{{showOrder(order)}}</li>
+                <button type="button" (click)="comenzarCoccion($index)">Cocinar</button>
+            }
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <h4>Pedido en cocción</h4>
+        <ul>
+            @if(currentOrder!=undefined){
+                <li>{{showOrder(currentOrder)}}</li>
+            }
+        </ul>
+        @if(currentOrder!=undefined){
+            <button type="button" (click)="enviarPedido()">Pedido Terminado!</button>
+        }
+    </div>
+</div>
