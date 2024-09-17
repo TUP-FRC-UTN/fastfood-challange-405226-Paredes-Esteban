@@ -15,9 +15,7 @@ export class PointOfSellComponent implements OnChanges{
   ngOnChanges(changes: SimpleChanges): void {
     if(changes['entrada']){
       this.contador=this.entrada;
-      console.log('POS RECIBIDO 1');
     }
-    console.log('POS CHANCHA');
   }
   order:Pedido = new Pedido();
   pedidoService= inject(RestaurantService);

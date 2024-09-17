@@ -14,9 +14,7 @@ export class KitchenComponent implements OnChanges{
   ngOnChanges(changes: SimpleChanges): void {
     if(changes['entradaP']){
       this.traerPedidos();
-      console.log('KITCHEN RECIBIDO 1');
     }
-    console.log('KITCHEN CHANCHA');
   }
   pedidoService = inject(RestaurantService);
   pendingOrders: Pedido[] = [];

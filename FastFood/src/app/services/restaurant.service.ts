@@ -22,7 +22,7 @@ export class RestaurantService {
 
   updateOrder(order:Pedido){
     this.orderLst.splice(this.orderLst.indexOf(order),1);
-    this.orderLst.push(order)
+    this.orderLst.push(order);
   }
 
   removeOrder(index:number){

@@ -20,9 +20,7 @@ export class RestaurantComponent implements OnChanges{
     if(changes['entradaP']){
       this.cargarPedidosListos();
       this.cargarPedidosNoListos();
-      console.log('RESTAUR RECIBIDO 1');
     }
-    console.log('REST CHANCHA ');
   }
   pedidosListos:Pedido[] = [];
   pedidosNoListos:Pedido[]=[];
